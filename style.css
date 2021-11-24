@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+:root{
+    --font-primary:'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(120deg,#f6d365,#fda085);
+    color: white;
+    font-family: var(--font-primary);
+}
+header{
+    font-size: 3rem;
+    font-weight: 400;
+}
+header,form{
+    display: flex;
+    align-items: center;
+    min-height: 20vh;
+    justify-content: center;
+}
+form input,form button{
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    border: none;
+    background: white;
+}
+form input:focus{
+    border: none;
+    outline: none;
+}
+form button{
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background: #d88771;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+}
+.todo-list{
+    min-width: 40%;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    text-align:left;
+}
+.todo li{
+    flex: 1;
+    padding:0 1rem 0 0.5rem;
+    text-align: left;
+}
+.todo-item{
+    text-align: left;
+}
+.trash-button,.complete-button{
+    background:#ff6f47 ;
+    color: white;
+    order: 1;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.complete-button{
+    background: rgb(71, 175, 71);
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+
+}
+.select::after{
+    content:'\25BC';
+    position:absolute;
+    top: 0;
+    right: 0;
+    background: #ff6f47 ;
+    padding:1rem 0.5rem;
+    pointer-events: none;  
+}
